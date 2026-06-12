@@ -1,0 +1,10 @@
+node_modules
+.next
+out
+dev-server.log
+dev-server.err.log
+dev-server.stdout.log
+dev-server.stderr.log
+.env*.local
+npm-debug.log*
+screenshots/

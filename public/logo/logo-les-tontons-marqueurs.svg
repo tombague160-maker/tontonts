@@ -1,0 +1,9 @@
+<!-- Remplacer ce fichier par le logo officiel fourni par LES TONTONS MARQUEURS. -->
+<svg width="1200" height="440" viewBox="0 0 1200 440" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1200" height="440" fill="transparent"/>
+  <path d="M105 332V118C146 132 184 165 220 217L241 252L263 217C299 165 337 132 378 118V332" stroke="#13284A" stroke-width="22" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M220 217L241 286L263 217" fill="#13284A"/>
+  <path d="M241 314C257 333 257 352 241 365C225 352 225 333 241 314Z" fill="#F4B51E"/>
+  <text x="435" y="204" fill="#13284A" font-family="Montserrat, Arial, sans-serif" font-size="76" font-weight="800">LES TONTONS</text>
+  <text x="435" y="333" fill="#13284A" font-family="Montserrat, Arial, sans-serif" font-size="76" font-weight="800">MARQUEURS</text>
+</svg>
