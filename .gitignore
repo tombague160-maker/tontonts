@@ -8,3 +8,5 @@ dev-server.stderr.log
 .env*.local
 npm-debug.log*
 screenshots/
+
+.vercel
