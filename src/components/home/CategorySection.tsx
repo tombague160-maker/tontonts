@@ -37,7 +37,7 @@ export function CategorySection() {
               <div className="p-5">
                 <h3 className="font-display text-xl font-black text-ink">{category.title}</h3>
                 <p className="mt-2 text-sm leading-6 text-ink/66">{category.description}</p>
-                <Button href="/personnaliser/tshirt" variant="ghost" className="mt-4 px-0">
+                <Button href="/personnaliser" variant="ghost" className="mt-4 px-0">
                   Personnaliser
                   <ArrowRight size={16} />
                 </Button>

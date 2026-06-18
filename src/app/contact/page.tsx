@@ -45,7 +45,7 @@ export default function ContactPage() {
           <h2 className="font-display text-4xl font-bold">Vous avez déjà votre logo ?</h2>
           <p className="mt-3 max-w-2xl text-white/72">Envoyez-le dans le formulaire ou préparez votre aperçu textile réaliste.</p>
           <div className="mt-6 flex flex-col gap-3 sm:flex-row">
-            <Button href="/personnaliser/tshirt" variant="gold">Préparer mon aperçu</Button>
+            <Button href="/personnaliser" variant="gold">Préparer mon aperçu</Button>
             <Button href="/devis" variant="light">Demander un devis</Button>
           </div>
         </div>

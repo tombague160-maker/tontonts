@@ -17,11 +17,20 @@ export function TshirtConfigurator({ product }: { product: Product }) {
 
   useEffect(() => {
     if (productId !== product.id) {
+      const preferredColor =
+        product.colors.find((color) => color.id === "bleu-marine") ??
+        product.colors.find((color) => color.id === "noir") ??
+        product.colors[0];
+      const preferredPlacement =
+        product.markingZones.find((placement) => placement === "coeur" || placement === "casquette-face" || placement === "cuisse") ??
+        product.markingZones[0];
+
       setProductDefaults(
         product.id,
-        product.colors.find((color) => color.id === "blanc")?.id ?? product.colors[0].id,
+        preferredColor.id,
         product.sizes,
-        product.techniques[0]
+        product.techniques[0],
+        preferredPlacement
       );
     }
   }, [product, productId, setProductDefaults]);
@@ -29,7 +38,7 @@ export function TshirtConfigurator({ product }: { product: Product }) {
   return (
     <div className="grid gap-6 xl:grid-cols-[minmax(0,1.12fr)_minmax(390px,0.88fr)]">
       <div className="xl:sticky xl:top-28 xl:self-start">
-        <PhotoTextilePreview />
+        <PhotoTextilePreview product={product} />
       </div>
 
       <div className="grid gap-5">

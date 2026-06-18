@@ -22,7 +22,7 @@ const items = [
 
 export function SavoirFaire() {
   return (
-    <AnimatedSection className="section-shell py-20">
+    <AnimatedSection id="techniques" className="section-shell py-20">
       <SectionTitle eyebrow="Broderie & marquage" title="Une présentation premium, pensée pour inspirer confiance.">
         <p>
           Chaque projet est guidé par le textile, le logo, l’usage et la quantité. L’objectif reste simple :

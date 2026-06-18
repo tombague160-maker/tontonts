@@ -54,7 +54,7 @@ export function ProductCard({ product }: { product: Product }) {
         </div>
 
         <div className="grid gap-2 sm:grid-cols-2">
-          <Button href="/personnaliser/tshirt" variant="primary">
+          <Button href={`/personnaliser/${product.id}`} variant="primary">
             Personnaliser
             <ArrowRight size={16} />
           </Button>

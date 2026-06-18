@@ -2,16 +2,15 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { FileText, Menu, X } from "lucide-react";
+import { Menu, Shirt, X } from "lucide-react";
 import { useState } from "react";
 import { Button } from "@/components/ui/Button";
 
 const navigation = [
   { label: "Accueil", href: "/" },
-  { label: "Services", href: "/#services" },
-  { label: "Vêtements", href: "/boutique" },
-  { label: "Personnalisation", href: "/personnaliser/tshirt" },
+  { label: "Personnaliser", href: "/personnaliser" },
   { label: "Réalisations", href: "/realisations" },
+  { label: "Nos techniques", href: "/#techniques" },
   { label: "Contact", href: "/contact" }
 ];
 
@@ -42,9 +41,9 @@ export function Header() {
         </nav>
 
         <div className="hidden xl:block">
-          <Button href="/devis" variant="primary">
-            <FileText size={18} />
-            Demander un devis
+          <Button href="/personnaliser" variant="primary">
+            <Shirt size={18} />
+            Créer mon textile
           </Button>
         </div>
 
@@ -72,9 +71,9 @@ export function Header() {
                 {item.label}
               </Link>
             ))}
-            <Button href="/devis" variant="gold" className="mt-2 w-full" onClick={() => setOpen(false)}>
-              <FileText size={18} />
-              Demander un devis
+            <Button href="/personnaliser" variant="gold" className="mt-2 w-full" onClick={() => setOpen(false)}>
+              <Shirt size={18} />
+              Créer mon textile
             </Button>
           </nav>
         </div>

@@ -29,7 +29,11 @@ export type MarkingZoneId =
   | "poitrine"
   | "dos-grand-format"
   | "manche-gauche"
-  | "manche-droite";
+  | "manche-droite"
+  | "casquette-face"
+  | "casquette-cote"
+  | "cuisse"
+  | "poche";
 
 export type GarmentColor = {
   id: string;

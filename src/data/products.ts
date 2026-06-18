@@ -26,7 +26,7 @@ export const markingTechniqueDescriptions: Record<MarkingTechnique, string> = {
   transfert: "Polyvalent, précis et adapté à de nombreux textiles."
 };
 
-export const markingZones: Record<string, MarkingZone> = {
+export const markingZones: Record<MarkingZone["id"], MarkingZone> = {
   coeur: {
     id: "coeur",
     label: "Coeur",
@@ -61,6 +61,34 @@ export const markingZones: Record<string, MarkingZone> = {
     view: "cote",
     recommendation: "Petit marquage manche",
     defaultTransform: { x: 58, y: 36, size: 64, rotation: 6 }
+  },
+  "casquette-face": {
+    id: "casquette-face",
+    label: "Face avant",
+    view: "face",
+    recommendation: "Logo brodé ou marqué sur le devant",
+    defaultTransform: { x: 63, y: 57, size: 104, rotation: 0 }
+  },
+  "casquette-cote": {
+    id: "casquette-cote",
+    label: "Côté casquette",
+    view: "cote",
+    recommendation: "Petit marquage latéral",
+    defaultTransform: { x: 68, y: 47, size: 70, rotation: -6 }
+  },
+  cuisse: {
+    id: "cuisse",
+    label: "Cuisse",
+    view: "face",
+    recommendation: "Logo discret sur la jambe",
+    defaultTransform: { x: 64, y: 72, size: 82, rotation: 0 }
+  },
+  poche: {
+    id: "poche",
+    label: "Poche",
+    view: "face",
+    recommendation: "Petit marquage proche de la poche",
+    defaultTransform: { x: 57, y: 61, size: 62, rotation: 0 }
   }
 };
 
@@ -110,7 +138,7 @@ export const products: Product[] = [
     gender: ["homme", "femme", "unisexe"],
     uses: ["entreprise", "evenement", "association", "travail"],
     images: { main: "/images/products/polo-product.jpg" },
-    markingZones: ["coeur", "poitrine", "dos-grand-format"],
+    markingZones: ["coeur", "dos-grand-format", "manche-gauche", "manche-droite"],
     techniques: ["broderie", "transfert", "serigraphie"],
     mockupType: "polo",
     fastDelay: true,
@@ -130,7 +158,7 @@ export const products: Product[] = [
     gender: ["unisexe", "homme", "femme"],
     uses: ["association", "sport", "evenement", "entreprise"],
     images: { main: "/images/products/sweat-product.jpg" },
-    markingZones: ["coeur", "poitrine", "dos-grand-format"],
+    markingZones: ["coeur", "dos-grand-format", "manche-gauche", "manche-droite"],
     techniques: ["flocage", "broderie", "transfert"],
     mockupType: "sweat",
     fastDelay: false,
@@ -150,7 +178,7 @@ export const products: Product[] = [
     gender: ["unisexe", "homme", "femme"],
     uses: ["travail", "entreprise", "evenement"],
     images: { main: "/images/products/workwear-product.jpg" },
-    markingZones: ["coeur", "dos-grand-format", "manche-gauche", "manche-droite"],
+    markingZones: ["coeur", "dos-grand-format"],
     techniques: ["broderie", "transfert"],
     mockupType: "jacket",
     fastDelay: false,
@@ -170,7 +198,7 @@ export const products: Product[] = [
     gender: ["unisexe", "enfant"],
     uses: ["sport", "evenement", "association"],
     images: { main: "/images/products/casquette-product.jpg" },
-    markingZones: ["poitrine"],
+    markingZones: ["casquette-face", "casquette-cote"],
     techniques: ["broderie", "transfert"],
     mockupType: "cap",
     fastDelay: true,
@@ -270,7 +298,7 @@ export const products: Product[] = [
     gender: ["unisexe", "homme", "femme"],
     uses: ["travail", "entreprise"],
     images: { main: "/images/products/workwear-product.jpg" },
-    markingZones: ["coeur"],
+    markingZones: ["cuisse", "poche"],
     techniques: ["broderie", "transfert"],
     mockupType: "workwear",
     fastDelay: false,

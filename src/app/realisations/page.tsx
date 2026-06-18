@@ -37,7 +37,7 @@ export default function RealisationsPage() {
                   l&apos;emplacement et la technique de marquage.
                 </p>
               </div>
-              <Button href="/personnaliser/tshirt" variant="gold" size="lg">
+              <Button href="/personnaliser" variant="gold" size="lg">
                 Préparer mon aperçu textile
               </Button>
             </div>

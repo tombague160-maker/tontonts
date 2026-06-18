@@ -27,9 +27,9 @@ export function Footer() {
         <div>
           <h2 className="font-display text-2xl font-bold">Site</h2>
           <div className="mt-4 grid gap-3 text-sm text-white/72">
-            <Link href="/#services" className="hover:text-gold">Services</Link>
+            <Link href="/#techniques" className="hover:text-gold">Nos techniques</Link>
             <Link href="/boutique" className="hover:text-gold">Vêtements</Link>
-            <Link href="/personnaliser/tshirt" className="hover:text-gold">Aperçu textile</Link>
+            <Link href="/personnaliser" className="hover:text-gold">Personnaliser</Link>
             <Link href="/realisations" className="hover:text-gold">Réalisations</Link>
             <Link href="/devis" className="hover:text-gold">Demande de devis</Link>
           </div>

@@ -28,7 +28,13 @@ type ConfiguratorState = {
   logoPreviewable: boolean;
   logoOpacity: number;
   customText: string;
-  setProductDefaults: (productId: string, colorId: string, sizes: string[], technique: MarkingTechnique) => void;
+  setProductDefaults: (
+    productId: string,
+    colorId: string,
+    sizes: string[],
+    technique: MarkingTechnique,
+    defaultPlacement?: MarkingZoneId
+  ) => void;
   setColor: (colorId: string) => void;
   setTechnique: (technique: MarkingTechnique) => void;
   setView: (view: ProductView) => void;
@@ -79,14 +85,14 @@ export const useConfiguratorStore = create<ConfiguratorState>((set, get) => ({
   logoPreviewable: false,
   logoOpacity: 1,
   customText: "",
-  setProductDefaults: (productId, colorId, sizes, technique) =>
+  setProductDefaults: (productId, colorId, sizes, technique, defaultPlacement = "poitrine") =>
     set({
       productId,
-      colorId: colorId === "blanc" ? "bleu-marine" : colorId,
+      colorId,
       technique,
-      selectedPlacements: ["poitrine"],
-      activePlacement: "poitrine",
-      view: "face",
+      selectedPlacements: [defaultPlacement],
+      activePlacement: defaultPlacement,
+      view: markingZones[defaultPlacement].view,
       transforms: initialTransforms(),
       sizeBreakdown: initialSizes(sizes)
     }),
